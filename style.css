@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+a,
+button {
+  font-family: "Public Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: hsl(233, 26%, 24%);
+  cursor: pointer;
+}
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+li {
+  list-style: none;
+}
+img {
+  display: block;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1.38rem 1.5rem;
+  z-index: 2;
+  background-color: #fff;
+}
+header .btn-invite {
+  display: none;
+}
+header .hamburger-icon {
+  cursor: pointer;
+}
+header nav {
+  display: none;
+  position: absolute;
+  padding: 2rem 0;
+  background-color: white;
+  top: 5.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  border-radius: 5px;
+  z-index: 2;
+}
+nav.open {
+  display: block;
+}
+header ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
+header nav ul li:hover a {
+  color: hsl(233, 26%, 24%);
+}
+.overlay {
+  display: none;
+  position: absolute;
+  height: 125vh;
+  width: 100vw;
+  background: linear-gradient(
+    180deg,
+    hsla(233, 26%, 24%, 0.95) 20%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+  z-index: 1;
+}
+.intro {
+  background-color: hsl(0, 0%, 98%);
+}
+.intro-image {
+  background: url(images/bg-intro-mobile.svg) 0 3.6rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 0 1rem;
+}
+.intro-image img {
+  margin: -7.6rem 0 0 0;
+  width: 100%;
+}
+.intro-text {
+  text-align: center;
+  padding: 1.55rem 1.5rem 5.5rem;
+}
+.intro-text h1 {
+  font-weight: 400;
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  color: hsl(233, 26%, 24%);
+  line-height: 1.228;
+}
+.intro-text p {
+  font-size: clamp(0.905rem, 3vw, 1.15rem);
+  line-height: 1.72;
+  color: hsl(233, 8%, 62%);
+  margin-block: 0.95rem;
+}
+.btn-invite {
+  font-size: 0.95rem;
+  color: hsl(0, 0%, 98%);
+  width: fit-content;
+  padding: 0.9rem 2.2rem;
+  margin: 0.95 auto 0;
+  border-radius: 50px;
+  background-image: linear-gradient(
+    90deg,
+    hsl(136, 65%, 51%),
+    hsl(192, 70%, 51%)
+  );
+}
+.btn-invite:hover {
+  scale: 0.95;
+}
+
+main p {
+  color: hsl(233, 8%, 62%);
+  line-height: 1.75;
+  font-size: 0.903rem;
+}
+main h2,
+main h3 {
+  font-weight: 400;
+  color: hsl(233, 26%, 24%);
+}
+main h2 {
+  font-size: 2rem;
+  letter-spacing: -0.5px;
+}
+main h3 {
+  font-size: 1.2rem;
+}
+
+.benefits {
+  text-align: center;
+  padding: 4rem 1.5rem 3rem;
+  background-color: hsl(220, 16%, 96%);
+}
+.benefits p {
+  margin-block: 1rem;
+}
+#benefits-heading {
+  margin-block: 0 2rem;
+}
+.benefits .benefit-item img {
+  margin-top: 2rem;
+  margin-inline: auto;
+}
+.benefits .benefit-item h3 {
+  margin-block: 1.6rem 1.25rem;
+}
+
+.latest-articles {
+  padding: 4.2rem 1.5rem 4rem;
+  background-color: hsl(0, 0%, 98%);
+}
+.latest-articles #latest-articles-heading {
+  margin-block: 1.5rem 2rem;
+  text-align: center;
+}
+.latest-articles article {
+  margin-bottom: 1.55rem;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.latest-articles article img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.latest-articles article > div {
+  padding: 1.62rem 1.5rem 2.6rem 2rem;
+}
+.latest-articles article > div p:first-child {
+  font-size: clamp(0.6rem, 2vw, 0.85rem);
+}
+.latest-articles article > div h3 {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  letter-spacing: -0.4px;
+  margin-block: 0.5rem 0.6rem;
+}
+.latest-articles article > div h3:hover {
+  color: hsl(136, 65%, 51%);
+  cursor: pointer;
+}
+.latest-articles article > div p:last-child {
+  font-size: clamp(0.805rem, 3vw, 1rem);
+  line-height: 1.4;
+  word-spacing: -1.1px;
+}
+footer {
+  background-color: hsl(233, 26%, 24%);
+  color: white;
+  padding: 2.5rem 0 3rem;
+  text-align: center;
+}
+footer .logo-social .social-icons {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  margin: 1.85rem 0 2.25rem;
+  scale: 1.2;
+}
+footer .logo-social .social-icons svg {
+  cursor: pointer;
+}
+footer .logo-social .social-icons svg:hover path {
+  fill: hsl(136, 65%, 51%);
+}
+footer ul {
+  text-align: center;
+}
+footer ul li {
+  margin-bottom: 0.95rem;
+}
+footer ul li a {
+  font-weight: 300;
+  font-size: clamp(0.905rem, 3vw, 1rem);
+  color: hsl(220, 16%, 96%);
+}
+footer ul li a:hover {
+  color: hsl(136, 65%, 51%);
+}
+footer .all-rights .btn-invite {
+  margin: 1.4rem auto 1.5rem;
+}
+footer .all-rights .btn-invite:hover {
+  filter: brightness(150%);
+}
+footer .all-rights p {
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  color: hsl(233, 8%, 62%);
+}
+
+@media (width > 768px) {
+  header {
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    padding: 1rem 1.5rem;
+  }
+
+  header nav {
+    display: block;
+    position: initial;
+    padding: 0;
+    margin: 0;
+    background-color: unset;
+  }
+  header nav ul {
+    flex-direction: row;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  header nav ul li a {
+    color: hsl(233, 8%, 62%);
+    padding-bottom: 1.7rem;
+  }
+  header nav ul li:hover a {
+    border-bottom: 5px solid hsl(136, 65%, 51%);
+  }
+  header .btn-invite {
+    display: block;
+    margin: 0;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.88rem;
+    word-spacing: -0.5px;
+  }
+  .hamburger-icon {
+    display: none;
+  }
+  .intro {
+    display: flex;
+    /* align-items: center; */
+    justify-content: end;
+    /* gap: 4rem; */
+  }
+  .intro-image {
+    background: url(images/bg-intro-desktop.svg) 0 0;
+    background-position: left center;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    order: 2;
+    padding: 0;
+    padding-left: 1.5rem;
+    height: auto;
+    /* width: 100%; */
+    overflow-x: clip;
+  }
+  .intro-image img {
+    margin: auto;
+    width: auto;
+  }
+  .intro-text {
+    text-align: left;
+    align-self: center;
+    max-width: 540px;
+    /* padding: 1.55rem 0 5.5rem; */
+    padding: 0;
+  }
+  .intro-text .btn-invite {
+    margin: 1rem 0 0;
+  }
+
+  .benefits,
+  .latest-articles {
+    display: grid;
+    grid-template-areas: repeat(2, 1fr);
+  }
+  #benefits-heading,
+  #latest-articles-heading {
+    grid-area: 1 / 1 / span 1 / span 2;
+  }
+  #benefits-heading h2,
+  #latest-articles-heading h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+  #benefits-heading p {
+    font-size: 1.2rem;
+  }
+  .latest-articles {
+    padding-bottom: 4rem;
+    padding-left: 3rem;
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-inline: 12rem 10rem;
+  }
+  footer .desktop-footer-left {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    max-width: 700px;
+  }
+  footer .logo-social {
+    gap: 3rem;
+    align-items: flex-start;
+  }
+  footer ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    padding: 0;
+  }
+  footer .all-rights {
+    align-items: flex-end;
+  }
+  .all-rights .btn-invite {
+    margin: 0;
+  }
+}
+
+@media (width > 1024px) {
+  /* header {
+    justify-content: flex-start;
+    gap: 15.3rem;
+    padding-left: 10rem;
+    border: solid red;
+  } */
+  /* nav {
+    border: solid blue;
+  } */
+  /* .logo,
+  header .btn-invite {
+    border: solid navajowhite;
+  } */
+  .intro-image img {
+    margin: -7.6rem -8rem -8rem auto;
+  }
+  .benefits,
+  .latest-articles {
+    grid-template-areas: repeat(4, 1fr);
+  }
+  #benefits-heading,
+  #latest-articles-heading {
+    grid-area: 1 / 1 / span 1 / span 4;
+    text-align: left;
+    margin: 2rem 0;
+    align-items: flex-start;
+    /* max-width: 700px; */
+  }
+  .benefits,
+  .latest-articles {
+    justify-content: center;
+  }
+
+  .benefit,
+  .latest-articles article {
+    max-width: 300px;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .desktop-footer-left {
+    gap: 4rem;
+  }
+}
